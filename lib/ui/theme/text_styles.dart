@@ -19,7 +19,7 @@ class AppTextStyle {
   // Headline 2
   static TextStyle get headline2 => const TextStyle(
         fontFamily: 'Pokemon',
-        color: Colors.red,
+        color: AppColors.secondaryColor,
         fontWeight: FontWeight.bold,
         fontSize: 30,
       );
@@ -30,7 +30,20 @@ class AppTextStyle {
         fontWeight: FontWeight.bold,
         fontSize: 20,
       );
-  // Bodytext 1
+  // Headline 4
+  static TextStyle get headline4 => const TextStyle(
+        fontFamily: 'Pokemon',
+        color: AppColors.secondaryColor,
+        fontWeight: FontWeight.w900,
+        fontSize: 15,
+      );
+  // Headline 4
+  static TextStyle get headline5 => const TextStyle(
+        fontFamily: 'Pokemon',
+        color: AppColors.primaryColor,
+        fontWeight: FontWeight.w900,
+        fontSize: 20,
+      ); // Bodytext 1
   static TextStyle get bodytext1 => const TextStyle(
         fontFamily: 'Pokemon',
         color: Colors.red,
@@ -42,6 +55,8 @@ class AppTextStyle {
         headline1: headline1,
         headline2: headline2,
         headline3: headline3,
+        headline4: headline4,
+        headline5: headline5,
         bodyText1: bodytext1,
       );
 }
