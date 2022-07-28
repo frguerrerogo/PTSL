@@ -87,8 +87,8 @@ class _HomePageState extends State<HomePage> {
   footer() {
     return BottomNavigationBar(
       backgroundColor: AppColors.primaryColor,
-      selectedLabelStyle: AppTextStyle.textTheme.headline3,
-      unselectedLabelStyle: AppTextStyle.textTheme.headline4,
+      selectedLabelStyle: AppTextStyle.textTheme.headline4,
+      unselectedLabelStyle: AppTextStyle.textTheme.headline6,
       elevation: 10,
       iconSize: 25,
       unselectedItemColor: AppColors.iconColor,
