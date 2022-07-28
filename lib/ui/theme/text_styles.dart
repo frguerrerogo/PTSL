@@ -43,7 +43,15 @@ class AppTextStyle {
         color: AppColors.primaryColor,
         fontWeight: FontWeight.w900,
         fontSize: 20,
-      ); // Bodytext 1
+      );
+  // Headline 4
+  static TextStyle get headline6 => const TextStyle(
+        fontFamily: 'Pokemon',
+        color: AppColors.primaryColor,
+        fontWeight: FontWeight.w900,
+        fontSize: 15,
+      );
+  // Bodytext 1
   static TextStyle get bodytext1 => const TextStyle(
         fontFamily: 'Pokemon',
         color: Colors.red,
@@ -57,6 +65,7 @@ class AppTextStyle {
         headline3: headline3,
         headline4: headline4,
         headline5: headline5,
+        headline6: headline6,
         bodyText1: bodytext1,
       );
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ptsl/ui/theme/colors.dart';
 import 'package:ptsl/ui/theme/text_styles.dart';
+import 'package:ptsl/ui/widgets/text_field.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginPage extends StatefulWidget {
@@ -48,56 +49,20 @@ class _LoagiPageState extends State<LoginPage> {
               ),
               child: Column(
                 children: [
-                  emailTextField(),
+                  emailTextField(email),
                   const SizedBox(height: 20),
-                  passwordTextField(),
+                  passwordTextField(password),
                 ],
               ),
             ),
-            boton(context, 'Iniciar sesión', 'home')
+            button(context, 'Iniciar sesión', 'home')
           ],
         ),
       ],
     );
   }
 
-  Widget emailTextField() {
-    return TextField(
-      controller: email,
-      style: AppTextStyle.textTheme.headline3,
-      keyboardType: TextInputType.emailAddress,
-      decoration: InputDecoration(
-        labelStyle: AppTextStyle.textTheme.headline3,
-        hintStyle: AppTextStyle.textTheme.headline3,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(15.0)),
-        hintText: 'Correo electrónico',
-        labelText: 'Correo electrónico',
-        suffixIcon: const Icon(Icons.perm_contact_calendar_outlined),
-      ),
-    );
-  }
-
-  Widget passwordTextField() {
-    return TextField(
-      controller: password,
-      obscureText: true,
-      obscuringCharacter: "*",
-      //autofocus: true,
-      textCapitalization: TextCapitalization.sentences,
-      style: AppTextStyle.textTheme.headline3,
-      decoration: InputDecoration(
-        labelStyle: AppTextStyle.textTheme.headline3,
-        hintStyle: AppTextStyle.textTheme.headline3,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(15.0)),
-        labelText: 'Contraseña',
-        hintText: 'Contraseña',
-        //filled: true,
-        suffixIcon: const Icon(Icons.password_sharp),
-      ),
-    );
-  }
-
-  Widget boton(context, titulo, page) {
+  Widget button(context, titulo, page) {
     var width = MediaQuery.of(context).size.width;
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
@@ -118,7 +83,6 @@ class _LoagiPageState extends State<LoginPage> {
       ),
       onPressed: () {
         addStringToSF();
-
         Navigator.pushNamed(context, page);
       },
     );
